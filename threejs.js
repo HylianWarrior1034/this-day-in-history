@@ -253,20 +253,20 @@ label.userData = {
   cNormal: new THREE.Vector3(),
   cPosition: new THREE.Vector3(),
   mat4: new THREE.Matrix4(),
-  trackVisibility: () => { // the closer to the edge, the less opacity
-    let ud = label.userData;
-    ud.cNormal.copy(label.position).normalize().applyMatrix3(globe.normalMatrix);
-    ud.cPosition.copy(label.position).applyMatrix4(ud.mat4.multiplyMatrices(camera.matrixWorldInverse, globe.matrixWorld));
-    let d = ud.cPosition.negate().normalize().dot(ud.cNormal);
-    d = smoothstep(0.2, 0.7, d);
-    label.element.style.opacity = d;
+//   trackVisibility: () => { // the closer to the edge, the less opacity
+//     let ud = label.userData;
+//     ud.cNormal.copy(label.position).normalize().applyMatrix3(globe.normalMatrix);
+//     ud.cPosition.copy(label.position).applyMatrix4(ud.mat4.multiplyMatrices(camera.matrixWorldInverse, globe.matrixWorld));
+//     let d = ud.cPosition.negate().normalize().dot(ud.cNormal);
+//     d = smoothstep(0.2, 0.7, d);
+//     label.element.style.opacity = d;
     
-    // https://github.com/gre/smoothstep/blob/master/index.js
-    function smoothstep (min, max, value) {
-      var x = Math.max(0, Math.min(1, (value-min)/(max-min)));
-      return x*x*(3 - 2*x);
-    };
-  }
+//     // https://github.com/gre/smoothstep/blob/master/index.js
+//     function smoothstep (min, max, value) {
+//       var x = Math.max(0, Math.min(1, (value-min)/(max-min)));
+//       return x*x*(3 - 2*x);
+//     };
+//   }
 }
 scene.add(label);
 // </Label>
@@ -315,7 +315,7 @@ let clock = new THREE.Clock();
 renderer.setAnimationLoop(() => {
   let t = clock.getElapsedTime();
   globalUniforms.time.value = t;
-  label.userData.trackVisibility();
+//   label.userData.trackVisibility();
   controls.update();
   renderer.render(scene, camera);
   labelRenderer.render(scene, camera);
