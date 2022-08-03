@@ -1,0 +1,130 @@
+
+body 
+{
+    overflow: hidden;
+    margin: 0;
+    background: #ede6dd;
+}
+
+.title{
+  position: fixed;
+  font-size: 2rem; 
+  font-family: Karla;
+  font-weight: 600;
+  color: #484848;
+  width: 80vw;
+  top: 2.3vh;
+  left: 2vw;
+  margin: 0;
+  text-align: left;
+  z-index: 100;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 740px){
+  .title{
+    text-align: center !important;
+    margin: 0 10vw !important;
+  }
+
+  #markerLabel{
+    max-height: 45vh;
+    width: 90vw !important;
+    top: 55vh !important;
+    right: 3vw !important;
+    overflow-y: auto;
+  }
+}
+
+
+
+/* canvas{
+  position: absolute;
+  left: 0;
+  width: 65vw !important;
+} */
+
+#info{
+    position: absolute;
+    bottom: 1vh;
+    color: teal;
+    width: 100%;
+    font-family: Monospace;
+    text-align: center;
+}
+
+#container{
+  position: absolute;
+  width: 100%;
+}
+
+#markerLabel {
+    --baseColor:black;
+    transform: translate(0, 0) !important;
+    position: fixed;
+    top: 5%;
+    right: 1%;
+    width: 310px;
+    height: auto;
+    color: var(--baseColor);
+    font-family: Monospace;
+    font-size: 14px;
+    /*font-weight: 700;*/
+    padding: 20px;
+    background: #f2f2f2;
+    border: 2px solid var(--baseColor);
+    border-radius: 5px;
+    margin-top: -25px;
+    margin-left: 120px;
+    padding: 0px;
+    transform: all ease 0.35s;
+    z-index: 101 !important;
+    overflow-y: auto;
+}
+
+#title{
+  text-decoration: underline;
+}
+
+#markerLabel div h2{
+  display: block;
+  text-decoration: underline;
+}
+#markerLabel div h3{
+  display:inline-block;
+  margin: 5px 0;
+}
+#markerLabel div h1{
+  font-size: 0.875rem;
+  display: inline-block;
+  margin: 0;
+}
+#markerLabel div{
+  margin: 10px 5px 10px;
+}
+
+#markerLabel a{
+  z-index: 1000;
+}
+
+.hidden{
+  display: none;
+}
+
+.text {
+  margin-left: 4px;
+}
+
+#closeButton{
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: 700;
+  text-align: center;
+  border: 1px solid gray;
+  border-radius: 3px;
+  background: transparent;
+  color: black;
+}

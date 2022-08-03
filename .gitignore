@@ -1,0 +1,7 @@
+node_modules/
+venv/
+app.js/
+bundle.js/
+package-lock.json/
+package.json/
+testing.html/
