@@ -77,7 +77,7 @@ let m = new THREE.PointsMaterial({
   vertexColors: true,
   onBeforeCompile: (shader) => {
     shader.uniforms.globeTexture = {
-      value: new THREE.TextureLoader().load(imgData)
+      value: new THREE.TextureLoader().load('earthpic.jpg')
     };
     shader.vertexShader = `
     	uniform sampler2D globeTexture;
