@@ -28,7 +28,7 @@ body
   }
 
   #markerLabel{
-    max-height: 45vh;
+    max-height: 40vh;
     width: 90vw !important;
     top: 55vh !important;
     right: 3vw !important;
