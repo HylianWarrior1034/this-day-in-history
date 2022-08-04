@@ -302,9 +302,9 @@ window.addEventListener("pointerdown", event => {
 		divURL.innerHTML = `<a href = ${mi.url} target = "_blank""> Wiki Link </a>`
 
 
-		label.position.copy(mi.cartesian);	
-		label.element.classList.remove("hidden");
-		divURL.addEventListener('pointerdown', () => {window.open(mi.url)})
+// 		label.position.copy(mi.cartesian);	
+// 		label.element.classList.remove("hidden");
+// 		divURL.addEventListener('pointerdown', () => {window.open(mi.url)})
 	}
 	
 })
