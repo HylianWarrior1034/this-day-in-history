@@ -304,7 +304,7 @@ window.addEventListener("pointerdown", event => {
 
 		label.position.copy(mi.cartesian);	
 		label.element.classList.remove("hidden");
-		divURL.addEventListener('pointerdown', () => {window.location = mi.url})
+		divURL.addEventListener('pointerdown', () => {window.open(mi.url)})
 	}
 	
 })
